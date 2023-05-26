@@ -1,5 +1,0 @@
-04/30/2023
-
-* Learned how to customeize my layout in Unity
-* Restructured file layout in VSCode
-* Began daily log
