@@ -4,3 +4,29 @@
 * Watched "Understanding what a personal project is" video
 * Created workspace for personal project
 * Began brainstorming different project ideas
+
+
+05/27/2023
+
+* Complete personal project outline as follows
+
+1
+Player Control:You control a adventurer in this top Down game
+where Arrow keys makes the player Move in four cardinal directions through the map
+
+2
+Basic Gameplay: During the game, zombies appear from offscreen and the goal of the 
+game is to Collect coins and escape without being touched by the zombies
+
+3
+Sound & Effects: There will be sound effects When a coin is collected and when a 
+zombie touches you and particle effects A particle explosion when a zombie touches you
+[optional] There will also be Background music
+
+4
+Gameplay Mechanics: As the game progresses, Zombies will speed up making it More difficult to evade them
+[optional] There will also be A bonus for reaching the exit after collecting all coins on the map
+
+5
+User Interface: The score will increase whenever A coin is collected.  At the start of the game, 
+the title "Spelunker" will appear and the game will end when The exit is reached or the player is touched by a zombie
