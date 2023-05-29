@@ -60,3 +60,4 @@ Feature on backlog - Add in lighting effects
 07/23
 
 * Actively choosing not to make a sketch because I don't want to install any photo editing software right now
+* Completed the 1st Unity Lab "Project Design Document"
