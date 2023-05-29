@@ -28,5 +28,33 @@ Gameplay Mechanics: As the game progresses, Zombies will speed up making it More
 [optional] There will also be A bonus for reaching the exit after collecting all coins on the map
 
 5
-User Interface: The score will increase whenever A coin is collected.  At the start of the game, 
-the title "Spelunker" will appear and the game will end when The exit is reached or the player is touched by a zombie
+User Interface: The score will increase whenever A coin is collected.  At the start 
+of the game, the title "Spelunker" will appear and the game will end when The exit 
+is reached or the player is touched by a zombie
+
+
+
+05/28/2023
+
+* Complete MVP Timeline as follows
+
+#1  Have a controllable square and the camera following the square top down
+06/04
+
+#2  Have map built and locations selected for start, coins, zombie squares, and exit
+06/11
+
+#3  Score & zombie functionality built out
+06/18
+
+#4  Music, sound, and particle effects added
+06/25
+
+#5  Replace player and zombie squares with sprites, add texture to level
+07/02
+
+Backlog
+Feature on backlog - Add in multiplier for time / number of coins collected
+Feature on backlog - Add in ability to stun / kill zombies
+Feature on backlog - Add in lighting effects
+07/23
