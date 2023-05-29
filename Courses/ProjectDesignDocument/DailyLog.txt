@@ -58,3 +58,5 @@ Feature on backlog - Add in multiplier for time / number of coins collected
 Feature on backlog - Add in ability to stun / kill zombies
 Feature on backlog - Add in lighting effects
 07/23
+
+* Actively choosing not to make a sketch because I don't want to install any photo editing software right now
