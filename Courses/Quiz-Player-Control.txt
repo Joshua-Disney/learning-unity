@@ -1,0 +1,117 @@
+Question 1
+Which Unity window contains a list of all the game objects currently in your scene?
+
+A: Scene view
+B: Hierarchy
+C: Inspector
+D: Project window
+
+Answer: C
+
+
+
+Question 2
+True or False: Visual Studio is not a part of Unity. You could use a different code editor to edit your C# scripts if you wanted to.
+
+A: True
+B: False
+
+Answer: B 
+
+
+
+Question 3
+What best describes the difference between the below images, where the car is in the second image is further along the road?
+
+A: The second car’s Z location value is higher than the first car’s
+B: The second car’s Y location value is higher than the first car’s
+C: The second car’s X location value is higher than the first car’s
+D: The second car’s Transform value is higher than the first car’s.
+
+Answer: A 
+
+
+
+Question 4
+In what order do you put the words when you are declaring a new variable? 
+
+A: [data type] [access modifier] [variable value] [variable name] 
+B: [data type] [access modifier] [variable name] [variable value]
+C: [variable name] [data type] [access modifier] [variable value]
+D: [access modifier] [data type] [variable name] [variable value]
+
+Answer: D 
+
+
+
+Question 5
+Which of the following variables would be visible in the Inspector?
+
+A: speed & turnSpeed
+B: turnSpeed
+C: speed
+D: horizontalInput & forwardInput
+
+Answer: A 
+
+
+
+Question 6
+What is a possible value for the horizontalInput variable?
+
+A: “Right”
+B: Vector3.Up
+C: -10
+D: 0.52
+
+Answer: A 
+
+
+
+Question 7
+What is true about the following two lines of code?
+
+A: They will both move an object the same distance
+B: They will both move an object in the same direction
+C: They will both move an object along the same axis
+D: They will both rotate an object, but along different axes
+
+Answer: B 
+
+
+
+Question 8
+Which of the following lines of code is using standard Unity naming conventions?`
+
+A: Line A
+B: Line B
+C: Line C
+D: Line D 
+
+Answer: D 
+
+
+
+Question 9
+Which comment would best describe the code below?
+
+A: Rotates around the Y axis based on left/right arrow keys
+B: Rotates around the Z axis based on up/down arrow keys
+C: Rotates in an upward direction based on left/right arrow keys
+D: Moves object up/down based on the the left/right arrow keys
+
+Answer: C 
+
+
+
+Question 10
+The image below shows the preferences window that allows you to change which script editing 
+tool (or IDE) you want to use. Where would you click to choose an alternative code editing tool?
+
+A: The red box (External Script Editor)
+B: The blue box (Image application)
+C: The green box (Revision control Diff/Merge)
+
+Answer: A 
+
+Total score: 5/10
