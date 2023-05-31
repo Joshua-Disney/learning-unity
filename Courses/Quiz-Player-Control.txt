@@ -6,7 +6,8 @@ B: Hierarchy
 C: Inspector
 D: Project window
 
-Answer: C
+My Answer: C
+Correct Answer: B
 
 
 
@@ -52,7 +53,8 @@ B: turnSpeed
 C: speed
 D: horizontalInput & forwardInput
 
-Answer: A 
+My Answer: A 
+Correct Answer: C
 
 
 
@@ -64,7 +66,8 @@ B: Vector3.Up
 C: -10
 D: 0.52
 
-Answer: A 
+My Answer: A 
+Correct Answer: D
 
 
 
@@ -76,7 +79,8 @@ B: They will both move an object in the same direction
 C: They will both move an object along the same axis
 D: They will both rotate an object, but along different axes
 
-Answer: B 
+My Answer: B 
+Correct Answer: A
 
 
 
@@ -100,7 +104,8 @@ B: Rotates around the Z axis based on up/down arrow keys
 C: Rotates in an upward direction based on left/right arrow keys
 D: Moves object up/down based on the the left/right arrow keys
 
-Answer: C 
+My Answer: C 
+Correct Answer: A
 
 
 
