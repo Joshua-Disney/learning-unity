@@ -61,3 +61,10 @@ Feature on backlog - Add in lighting effects
 
 * Actively choosing not to make a sketch because I don't want to install any photo editing software right now
 * Completed the 1st Unity Lab "Project Design Document"
+
+
+
+05/30/2023
+
+* Review and retake test on Unity basics
+* Scored 5/10 initially yesterday and 10/10 on retake
