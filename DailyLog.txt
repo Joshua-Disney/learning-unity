@@ -68,3 +68,9 @@ Feature on backlog - Add in lighting effects
 
 * Review and retake test on Unity basics
 * Scored 5/10 initially yesterday and 10/10 on retake
+
+
+
+05/31/2023
+
+* Begin rebuilding first project "Start Your 3D Engines" from scratch
