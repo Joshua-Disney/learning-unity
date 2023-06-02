@@ -74,3 +74,12 @@ Feature on backlog - Add in lighting effects
 05/31/2023
 
 * Begin rebuilding first project "Start Your 3D Engines" from scratch
+
+
+
+06/01/2023
+
+* Complete "Start Your 3D Engines" project
+* Add in additional obstacles
+* Extend road for additional playtime
+* Begin planning stage for further bonus objectives
