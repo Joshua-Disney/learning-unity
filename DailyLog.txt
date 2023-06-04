@@ -83,3 +83,11 @@ Feature on backlog - Add in lighting effects
 * Add in additional obstacles
 * Extend road for additional playtime
 * Begin planning stage for further bonus objectives
+
+
+
+06/03/2023
+
+* Add second road
+* Add second car
+* Add automatic driving for second car
