@@ -91,3 +91,10 @@ Feature on backlog - Add in lighting effects
 * Add second road
 * Add second car
 * Add automatic driving for second car
+
+
+
+06/04/2023
+
+* Continue adding crates
+* Add NPC traffic driving towards player
