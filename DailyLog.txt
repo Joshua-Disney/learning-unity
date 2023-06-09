@@ -98,3 +98,11 @@ Feature on backlog - Add in lighting effects
 
 * Continue adding crates
 * Add NPC traffic driving towards player
+
+
+
+06/08/2023
+
+* Finish camera settings for multiplayer
+* Finish camera switching option
+* Complete Start Your Engines Bonus project
