@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public float turnSpeed = 100.0f;
     public float forwardInput;
     public float horizontalInput;
+    public Camera mainCamera;
+    public Camera hoodCamera;
+    public KeyCode switchKey;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +23,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set inputs
         forwardInput = Input.GetAxis("VerticalP1");
         horizontalInput = Input.GetAxis("HorizontalP1");
         // Move the Player forward and turn based on input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+        // Switch enabled Camera
+        if(Input.GetKeyDown(switchKey)) {
+            mainCamera.enabled = !mainCamera.enabled;
+            hoodCamera.enabled = !hoodCamera.enabled;
+        }
     }
 }
