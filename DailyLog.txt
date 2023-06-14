@@ -106,3 +106,18 @@ Feature on backlog - Add in lighting effects
 * Finish camera settings for multiplayer
 * Finish camera switching option
 * Complete Start Your Engines Bonus project
+
+
+
+06/10/2023
+
+* Initialize project
+* Load initial assets onto map
+* Move and scale assets
+
+
+
+06/11/2023
+
+* Added movement functionality to player left & right via input
+* Created my first ever invisible wall
