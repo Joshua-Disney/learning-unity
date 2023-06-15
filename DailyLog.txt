@@ -121,3 +121,11 @@ Feature on backlog - Add in lighting effects
 
 * Added movement functionality to player left & right via input
 * Created my first ever invisible wall
+
+
+
+06/14/2023
+
+* Brain turning to fog 
+* Turned animals into prefabs
+* Added Destroy function if prefabs move offscreen
