@@ -129,3 +129,10 @@ Feature on backlog - Add in lighting effects
 * Brain turning to fog 
 * Turned animals into prefabs
 * Added Destroy function if prefabs move offscreen
+
+
+
+06/16/2023
+
+* Created animalPrefabs GameObject arrary
+* Made functionality to spawn animals by index on button press
