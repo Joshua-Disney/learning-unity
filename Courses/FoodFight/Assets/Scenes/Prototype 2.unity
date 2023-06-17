@@ -519,8 +519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
-  xRange: 10
+  speed: 15
+  xRange: 20
   projectilePrefab: {fileID: 7830492177127505734, guid: c9a30a585d1c54840bcd7575fb72c4ea, type: 3}
 --- !u!1 &1590138454
 GameObject:
@@ -822,7 +822,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6760818542086648943, guid: 836bf1a0b2a302c4eb68d94efb3bb4ba, type: 3}
+    - {fileID: -5033821577372806711, guid: 836bf1a0b2a302c4eb68d94efb3bb4ba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 836bf1a0b2a302c4eb68d94efb3bb4ba, type: 3}
 --- !u!1001 &6529444541026648470
 PrefabInstance:
