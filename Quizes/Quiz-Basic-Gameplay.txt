@@ -1,0 +1,223 @@
+Question 1: If it says, “Hello there!” in the console, what was the code used to create that message?
+
+A: Debug(“Hello there!”);
+B: Debug.Log("Hello there!");
+C: Debug.Console(“Hello there!”);
+D: Debug.Log(Hello there!);
+
+Answer: B
+
+
+
+Question 2: If you want to destroy an object when its health reaches 0, what code would be best in the blank below?
+
+private int health = 0;
+void Update() {
+    if (______) {
+        Destroy(gameObject);
+    }
+}
+
+A: health > 0
+B: health.0 
+C: health < 1
+D: health < 0
+
+Answer: C
+
+
+
+Question 3: Question 3
+The code below creates an error that says, “error CS1503: Argument 1: cannot convert from 'UnityEngine.GameObject[]' 
+to 'UnityEngine.Object'”.  What could you do to remove the errors?
+
+public GameObject[] enemyPrefabs;
+void Start() {
+    Instantiate(enemyPrefabs);
+}
+
+A: On line 1, change “GameObject[]” to “GameObject”
+B: On line 1, change “enemyPrefabs” to “enemyPrefabs[0]”
+C: On line 3, change “Start()” to “Update()”
+D: On line 5, change “enemyPrefabs” to “enemyPrefabs[0]”
+E: Either A or D
+F: Both A and D together
+G: Both B and C together
+
+Answer: D
+Correct answer: E 
+
+
+
+Question 4: Which comment best describes the following code?
+
+public class PlayerController : MonoBehavior
+{
+    //Comment
+    private void OnTriggerEnter(Collider other) {
+        Destroy(other.gameObject);
+    }
+}
+
+A: If player collides with another object, destroy player
+B: If enemy collides with another object, destroy the object
+C: If player collides with a trigger, destroy trigger
+D: If player collides with another object, destroy the object
+
+Answer: D
+
+
+
+Question 5: If you want to move the character up continuously as the player presses the up arrow, what code would be best in the two blanks below:
+
+if (Input.______(_______)) {
+    transform.Translate(Vector3.up)
+}
+
+A: GetKey(KeyCode.UpArrow)
+B: GetKeyDown(UpArrow)
+C: GetKeyUp(KeyCode.Up)
+D: GetKeyHeld(Vector3.Up)
+
+Answer: B 
+Correct answer: A 
+
+
+
+Question 6: Read the documentation from the Unity Scripting API and the code below. Which of the following are possible values for the randomFloat and randomInt variables?
+
+public static float Range(float min, float max);
+Description
+Return a random float number between min[inclusive] and max[inclusive] (Read Only).
+Note max is inclusive.  Random.Range(0.0f, 1.0f) can return 1.0 as the value.  The Random.Range distribution is uniform.  Range is a random number generator.
+
+-----
+
+public static int Range(int min, int max);
+Description
+Return a random integer number between min[inclusive] and max[exclusive] (Read Only).
+Note max is exclusive.  Random.Range(0, 10) can return a value between 0 and 9.  Return min if max equals min.  The Random.Range distribution is uniform.  
+Range is a random number generator.
+
+-----
+
+float randomFloat = Random.Range(0f, 100f);
+inty randomInt = Random.Range(0, 100);
+
+A: randomFloat = 100.0f; randomInt = 0;
+B: randomFloat = 100.0f; randomInt = 100;
+C: randomFloat = 50.5f; randomInt = 100;
+D: randomFloat = 0.0f; randomInt = 50.5;
+
+Answer: A 
+
+
+
+Question 7: You are trying to randomly spawn objects from an array. However, when your game is running, you see in the console that there was 
+an “error at Assets/Scripts/SpawnManager.cs:5. IndexOutOfRangeException: Index was outside the bounds of the array.” Which line of code should you 
+edit in order to resolve this problem and still retain the random object functionality?
+
+public GameObject[] randomObjects;
+
+void SpawnRandomObject() {
+    int objectIndex = Random.Range(0, 3);
+    Instantiate(randomObjects[objectIndex]);
+}
+
+A: Line 2
+B: Line 3
+C: Line 4
+D: Line 5
+
+Answer: C 
+
+
+
+Question 8: If you have made changes to a prefab in the scene and you want to apply those changes to all prefabs, what should you click?
+
+alt="Hierarchy & Inspector"
+
+A: The “Create” or "+" drop-down at the top of the Hierarchy
+B: The “Open” button at the top of the Inspector
+C: The “Overrides” drop-down at the top of the Inspector
+D: The “Add Component” button at the bottom of the Inspector
+
+Answer: C 
+
+
+
+Question 9: Read the documentation from the Unity Scripting API below. Which of the following is a correct use of the InvokeRepeating method?
+
+public void InvokeRepeating(string methodName, float time, float repeatRate);
+Description
+Invoikes the method methodName in time seconds, then repeatedly every repeatRate seconds.
+
+A: InvokeRepeating(“Spawn, 0.5f, 1.0f”);
+B: InvokeRepeating(“Spawn”, 0.5f, 1.0f);
+C: InvokeRepeating(“Spawn", gameObject, 1.0f);
+D: InvokeRepeating(0.5f, 1.0f, “Spawn”);
+
+Answer: B 
+
+
+
+Question 10: You’re trying to create some logic that will tell the user to speed up if they’re going too slow or to slow down if they’re going too fast. 
+How should you arrange the lines of code below to accomplish that?
+
+1. Debug.Log(speedUp); }
+2. else if (speed > 60) {
+3. private string speedUp = "Speed up!";
+4. void Update() {
+5. Debug.Log(slowDown) }
+6. if (speed < 10) {
+7. private float speed;
+8. private string slowDown = "Slow down!";
+9. }
+
+A: 4, 6, 1, 2, 5, 9, 7, 8, 3
+void Update() 
+{
+if (speed < 10) {Debug.Log(speedUp); }
+else if (speed > 60) {
+Debug.Log(slowDown); }
+}
+private float speed;
+private string slowDown = "Slow down!";
+private string speedUp = "Speed up!";
+
+B: 6, 1, 2, 5, 7, 8, 3, 4, 9
+if (speed < 10) {
+Debug.Log(speedUp); }
+else if (speed > 60) {
+Debug.Log(slowDown); }
+private float speed;
+private string slowDown = "Slow down!";
+private string speedUp = "Speed up!";
+void Update() {
+}
+
+C: 7, 8, 3, 4, 6, 5, 2, 1, 9
+private float speed;
+private string slowDown = "Slow down!";
+private string speedUp = "Speed up!";
+void Update() {
+if (speed < 10) {
+Debug.Log(slowDown); }
+else if (speed > 60) {
+Debug.Log(speedUp); }
+}
+
+D: 7, 8, 3, 4, 6, 1, 2, 5, 9
+private float speed;
+private string slowDown = "Slow down!";
+private string speedUp = "Speed up!";
+void Update() {
+if (speed < 10) {
+Debug.Log(speedUp); }
+else if (speed > 60) {
+Debug.Log(slowDown); }
+}
+
+Answer: D
+
+Total Score: 8/10
