@@ -15,4 +15,8 @@ public class AnimalAggression : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log("Game Over!");
+    }
 }
