@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetTrigger("Jump_trig");
             isOnGround = false;
             dirtParticle.Stop();
-            playerAudio.PlayOneShot(jumpSound, 1.0f);
+            playerAudio.PlayOneShot(jumpSound, .4f);
         }
     }
 
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
             dirtParticle.Stop();
-            playerAudio.PlayOneShot(crashSound, 1.0f);
+            playerAudio.PlayOneShot(crashSound, .5f);
         }
     }
 }
