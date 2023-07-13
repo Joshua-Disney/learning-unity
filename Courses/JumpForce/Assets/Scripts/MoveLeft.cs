@@ -27,5 +27,3 @@ public class MoveLeft : MonoBehaviour
         }
     }
 }
-
-// Problem is in here somewhere
