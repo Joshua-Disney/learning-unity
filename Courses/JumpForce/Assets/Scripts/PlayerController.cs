@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce);
             playerAnim.SetTrigger("Jump_trig");
             isOnGround = false;
             dirtParticle.Stop();
