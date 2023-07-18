@@ -1,0 +1,88 @@
+Question 1
+You are trying to STOP spawning enemies when the player has died and have created 
+the two scripts below to do that. However, there is an error on the underlined code, 
+“isAlive” in the EnemySpawner script. What is causing that error?
+
+public class PlayerController : MonoBehavior {
+    bool isAlive;
+    ...
+}
+
+A: The “p” should be capitalized in “playerController.isAlive”
+B: The “bool” in the PlayerController class needs a “public” access modifier
+C: The if-statement cannot be in the Update method
+D: “isAlive” must start with a capital “I” (“IsAlive”)
+
+My Answer: A
+Correct answer: B 
+
+
+
+Question 2
+Match the following animation methods with its set of parameters
+
+Answer: C
+
+
+
+Question 3
+Given the animation controller / state machine below, which code will make the character 
+transition from the “Idle” state to the “Walk” state?
+
+Answer: A
+
+
+
+Question 4
+Which of these is the correct way to get a reference to an AudioSource component on a GameObject?
+
+Answer: A
+
+
+
+Question 5
+When you run a project with the code below, you get the following error: 
+“NullReferenceException: Object reference not set to an instance of an object.” 
+What is most likely the problem?
+
+Answer: D
+
+
+
+Question 6
+Which of the following conditions properly tests that the game is NOT over and the player IS on the ground
+
+Answer: C
+
+
+
+Question 7
+By default, what will be the first state used by this Animation Controller? 
+
+Answer: B
+
+
+
+Question 8
+Which of the following variable declarations observes Unity’s standard naming conventions 
+(especially as it relates to capitalization)?
+
+My Answer: C
+Correct answer: D
+
+
+
+Question 9
+Which of the following is most likely the condition for the transition between “Run” and “Walk” shown below?
+
+My Answer:  C
+Correct answer: B
+
+
+
+Question 10
+Which of the following do you think makes the most sense for a simple movement state machine? 
+
+Answer: A
+
+Total score: 7/10
