@@ -6,9 +6,9 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] obstaclePrefabs;
     public Vector3[] spawnPosArr = new [] {
-        new Vector3(33, 2, 0), 
-        new Vector3(33, 0, 0), 
-        new Vector3(33, 0, 0)
+        new Vector3(33f, 2f, 0f), 
+        new Vector3(33f, 0f, 0f), 
+        new Vector3(33f, 1.5f, -1f)
     };
     private float startDelay = 2;
     private float repeatRate = 2;
