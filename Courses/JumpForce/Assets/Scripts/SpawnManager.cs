@@ -5,13 +5,15 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] obstaclePrefabs;
-    public Vector3[] spawnPosArr = new [] {
+    private Vector3[] spawnPosArr = new [] {
         new Vector3(33f, 2f, 0f), 
         new Vector3(33f, 0f, 0f), 
-        new Vector3(33f, 1.7f, -1f)
+        new Vector3(33f, 1.7f, -1f), 
+        new Vector3(33f, 0f, 0f), 
+        new Vector3(33f, 1.7f, -.75f)
     };
-    private float startDelay = 2;
-    private float repeatRate = 2;
+    private float startDelay = 2.0f;
+    private float repeatRate = 2.0f;
     private PlayerController playerControllerScript;
     // Start is called before the first frame update
     void Start()

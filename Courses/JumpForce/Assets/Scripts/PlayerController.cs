@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     public ParticleSystem dirtParticle;
     public AudioClip jumpSound;
     public AudioClip crashSound;
-    public float jumpForce = 10.0f;
+    private float jumpForce = 350.0f;
     public float gravityModifier; 
     public bool gameOver = false;
     public int jumpsLeft = 2;
@@ -25,12 +25,12 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)  && !gameOver && jumpsLeft > 0) {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce * jumpsLeft, ForceMode.Impulse);
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, .4f);
             jumpsLeft -= 1;
-        } 
+        }
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour {
         } else if (collision.gameObject.CompareTag("Obstacle") && !gameOver) {
             Debug.Log("Game Over");
             gameOver = true;
+            playerRb.AddForce(Vector3.left * 50, ForceMode.Impulse);
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
