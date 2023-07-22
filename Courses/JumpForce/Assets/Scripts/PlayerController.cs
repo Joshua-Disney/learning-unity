@@ -39,14 +39,13 @@ public class PlayerController : MonoBehaviour {
             jumpsLeft = 2;
         } else if (collision.gameObject.CompareTag("Obstacle") && !gameOver) {
             Debug.Log("Game Over");
-            gameOver = true;
-            playerRb.AddForce(Vector3.left * 50, ForceMode.Impulse);
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, .5f);
             jumpsLeft = 0;
+            gameOver = true;
         }
     }
 }
