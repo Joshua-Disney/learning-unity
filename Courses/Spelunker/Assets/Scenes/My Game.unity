@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 176065222}
   - component: {fileID: 176065221}
   - component: {fileID: 176065220}
-  - component: {fileID: 176065219}
   m_Layer: 0
   m_Name: EastWall
   m_TagString: Untagged
@@ -158,22 +157,6 @@ Transform:
   m_Father: {fileID: 1748761188}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
---- !u!54 &176065219
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176065217}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &176065220
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -250,7 +233,6 @@ GameObject:
   - component: {fileID: 392068354}
   - component: {fileID: 392068353}
   - component: {fileID: 392068352}
-  - component: {fileID: 392068351}
   m_Layer: 0
   m_Name: NorthWall
   m_TagString: Untagged
@@ -273,22 +255,6 @@ Transform:
   m_Father: {fileID: 1748761188}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!54 &392068351
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392068349}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &392068352
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -561,7 +527,6 @@ GameObject:
   - component: {fileID: 536961665}
   - component: {fileID: 536961664}
   - component: {fileID: 536961663}
-  - component: {fileID: 536961662}
   m_Layer: 0
   m_Name: SouthWall
   m_TagString: Untagged
@@ -584,22 +549,6 @@ Transform:
   m_Father: {fileID: 1748761188}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
---- !u!54 &536961662
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536961660}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &536961663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -770,7 +719,6 @@ GameObject:
   - component: {fileID: 843219728}
   - component: {fileID: 843219727}
   - component: {fileID: 843219726}
-  - component: {fileID: 843219725}
   m_Layer: 0
   m_Name: WestWall
   m_TagString: Untagged
@@ -793,22 +741,6 @@ Transform:
   m_Father: {fileID: 1748761188}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!54 &843219725
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843219723}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &843219726
 MeshCollider:
   m_ObjectHideFlags: 0
