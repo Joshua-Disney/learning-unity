@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour {
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, .4f);
             jumpsLeft -= 1;
+        } else if (Input.GetKey(KeyCode.LeftShift) && !gameOver && jumpsLeft == 2) {
+            // Code will go here increasing the speed variable from the MoveLeft script
+            // Spent 40 minutes reading documents trying to figure out how to do this.
         }
     }
 
