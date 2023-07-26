@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    private Rigidbody playerRb;
-    private Animator playerAnim;
+    private float jumpForce = 350.0f;
     private AudioSource playerAudio;
+    private Animator playerAnim;
+    private Rigidbody playerRb;
+    private MoveLeft moveLeft;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
-    public AudioClip jumpSound;
-    public AudioClip crashSound;
-    private float jumpForce = 350.0f;
     public float gravityModifier; 
     public bool gameOver = false;
+    public AudioClip crashSound;
+    public AudioClip jumpSound;
     public int jumpsLeft = 2;
     // Start is called before the first frame update
     void Start() {
-        playerRb = GetComponent<Rigidbody>();
-        playerAnim = GetComponent<Animator>();
+        moveLeft = GameObject.Find("MoveLeft").GetComponent<MoveLeft>();
         playerAudio = GetComponent<AudioSource>();
+        playerAnim = GetComponent<Animator>();
+        playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier; 
     }
 
@@ -26,13 +28,15 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)  && !gameOver && jumpsLeft > 0) {
             playerRb.AddForce(Vector3.up * jumpForce * jumpsLeft, ForceMode.Impulse);
+            playerAudio.PlayOneShot(jumpSound, .4f);
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
-            playerAudio.PlayOneShot(jumpSound, .4f);
             jumpsLeft -= 1;
-        } else if (Input.GetKey(KeyCode.LeftShift) && !gameOver && jumpsLeft == 2) {
+        } 
+        if (Input.GetKey(KeyCode.LeftShift) && !gameOver && jumpsLeft == 2) {
             // Code will go here increasing the speed variable from the MoveLeft script
             // Spent 40 minutes reading documents trying to figure out how to do this.
+            moveLeft.speed = 30;
         }
     }
 
