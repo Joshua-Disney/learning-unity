@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour {
     private AudioSource playerAudio;
     private Animator playerAnim;
     private Rigidbody playerRb;
-    private MoveLeft moveLeft;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
     public float gravityModifier; 
@@ -15,9 +14,9 @@ public class PlayerController : MonoBehaviour {
     public AudioClip crashSound;
     public AudioClip jumpSound;
     public int jumpsLeft = 2;
+    public bool isSprinting = false;
     // Start is called before the first frame update
     void Start() {
-        moveLeft = GameObject.Find("MoveLeft").GetComponent<MoveLeft>();
         playerAudio = GetComponent<AudioSource>();
         playerAnim = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody>();
@@ -34,9 +33,9 @@ public class PlayerController : MonoBehaviour {
             jumpsLeft -= 1;
         } 
         if (Input.GetKey(KeyCode.LeftShift) && !gameOver && jumpsLeft == 2) {
-            // Code will go here increasing the speed variable from the MoveLeft script
-            // Spent 40 minutes reading documents trying to figure out how to do this.
-            moveLeft.speed = 30;
+            isSprinting = true;    
+        } else if (Input.GetKeyUp(KeyCode.LeftShift)) {
+            isSprinting = false;
         }
     }
 
