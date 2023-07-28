@@ -136,3 +136,9 @@ Feature on backlog - Add in lighting effects
 
 * Created animalPrefabs GameObject arrary
 * Made functionality to spawn animals by index on button press
+
+
+
+07/27/2023
+
+*Completed Bonus content for Jump Force Project.
