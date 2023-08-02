@@ -28,4 +28,8 @@ public class PlayerController : MonoBehaviour
             isPoweredUp = true;
         }
     }
+
+    private void OnCollisionEnter(Collision collision) {
+        Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
+    }
 }
