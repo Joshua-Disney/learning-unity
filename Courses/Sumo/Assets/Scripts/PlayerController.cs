@@ -27,14 +27,22 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Powerup")) {
             Destroy(other.gameObject);
             isPoweredUp = true;
+            StartCoroutine(PowerUpCountdownRoutine());
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
-        Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+    IEnumerator PowerUpCountdownRoutine() {
+        yield return new WaitForSeconds(7);
+        isPoweredUp = false;
+    }
 
-        enemyRb.AddForce(awayFromPlayer * powerUpForce, ForceMode.Impulse);
-        Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Enemy") && isPoweredUp) {
+            Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+
+            enemyRb.AddForce(awayFromPlayer * powerUpForce, ForceMode.Impulse);
+            Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
+        }
     }
 }
