@@ -31,10 +31,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
-        Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+        if (collision.gameObject.CompareTag("Enemy") && isPoweredUp) {
+            Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
 
-        enemyRb.AddForce(awayFromPlayer * powerUpForce, ForceMode.Impulse);
-        Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
+            enemyRb.AddForce(awayFromPlayer * powerUpForce, ForceMode.Impulse);
+            Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
+        }
     }
 }
