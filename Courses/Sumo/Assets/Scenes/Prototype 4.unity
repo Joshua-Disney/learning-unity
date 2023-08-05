@@ -235,6 +235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4063069081119302132, guid: e07d785c1bdb88f4e9482f01751d8467, type: 3}
+  powerupPrefab: {fileID: 7509538842110141832, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
+  enemyCount: 0
+  waveNumber: 1
 --- !u!4 &796909739
 Transform:
   m_ObjectHideFlags: 0
@@ -457,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e88c7d79a282a42b305da6bcc8fa38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationSpeed: 150
 --- !u!4 &1215735274
 Transform:
   m_ObjectHideFlags: 0
@@ -562,63 +565,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8878a37eb67ddac4ead51890a31d6a18, type: 3}
---- !u!1001 &1430025312
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7509538842110141832, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_Name
-      value: Powerup
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509538842110561100, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
 --- !u!1 &2100525983
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807b3b19ddbc7a04a9f9dfcffb2c6e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
   isPoweredUp: 0
   powerupIndicator: {fileID: 517914883}
 --- !u!54 &2100525989
@@ -766,7 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
