@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody enemyRb;
     private GameObject player;
-    public float enemySpeed = 0.5f;
+    public float speed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        enemyRb.AddForce(lookDirection * enemySpeed);
+        enemyRb.AddForce(lookDirection * speed);
     }
 }
