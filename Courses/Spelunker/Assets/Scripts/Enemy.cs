@@ -21,8 +21,16 @@ public class Enemy : MonoBehaviour
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         enemyRb.AddForce(lookDirection * speed);
-        if (transform.position.x > horizontalBound || transform.position.x < -horizontalBound || transform.position.z > horizontalBound || transform.position.z < -horizontalBound || transform.position.y < verticalBound) {
+        
+        
+        if (transform.position.x > horizontalBound) {
             Destroy(gameObject);
-        } 
+        } else if (transform.position.x < -horizontalBound) {
+            Destroy(gameObject);
+        } else if (transform.position.z > horizontalBound) {
+            Destroy(gameObject);
+        } else if (transform.position.z < -horizontalBound) {
+            Destroy(gameObject);
+        }
     }
 }
