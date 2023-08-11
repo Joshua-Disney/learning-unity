@@ -6,7 +6,9 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody enemyRb;
     private GameObject player;
-    public float enemySpeed = 0.5f;
+    private float horizontalBound = 23.0f;
+    private float verticalBound = -2.0f;
+    public float speed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,17 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        enemyRb.AddForce(lookDirection * enemySpeed);
+        enemyRb.AddForce(lookDirection * speed);
+        
+        
+        if (transform.position.x > horizontalBound) {
+            Destroy(gameObject);
+        } else if (transform.position.x < -horizontalBound) {
+            Destroy(gameObject);
+        } else if (transform.position.z > horizontalBound) {
+            Destroy(gameObject);
+        } else if (transform.position.z < -horizontalBound) {
+            Destroy(gameObject);
+        }
     }
 }
