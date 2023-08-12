@@ -6,8 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody enemyRb;
     private GameObject player;
-    private float horizontalBound = 23.0f;
-    private float verticalBound = -2.0f;
+    private float horizontalBound = 25.0f;
     public float speed = 0.5f;
     // Start is called before the first frame update
     void Start()
