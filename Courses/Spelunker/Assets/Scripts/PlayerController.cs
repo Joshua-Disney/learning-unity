@@ -35,4 +35,10 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
     }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Enemy")) {
+            Debug.Log("A zombie got you!  RIP");
+        }
+    }
 }
