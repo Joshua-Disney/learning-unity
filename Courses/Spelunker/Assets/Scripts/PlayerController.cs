@@ -32,13 +32,20 @@ public class PlayerController : MonoBehaviour
         
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        Vector3 move = new Vector3(horizontalInput, 0, verticalInput);
+        transform.Translate(move * Time.deltaTime * speed);
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Enemy")) {
+            Debug.Log("A zombie got you!  RIP");
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Enemy")) {
-            Debug.Log("A zombie got you!  RIP");
+        if (other.gameObject.CompareTag("Treasure")) {
+            Destroy(other.gameObject);
+            Debug.Log("A piece of treasure was found!");
         }
     }
 }
