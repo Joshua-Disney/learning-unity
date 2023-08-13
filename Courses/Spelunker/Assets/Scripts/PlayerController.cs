@@ -41,4 +41,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("A zombie got you!  RIP");
         }
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Treasure")) {
+            Destroy(other.gameObject);
+            Debug.Log("A piece of treasure was found!");
+        }
+    }
 }
