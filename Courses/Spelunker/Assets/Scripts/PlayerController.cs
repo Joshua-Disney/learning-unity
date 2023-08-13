@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
         transform.Translate(move * Time.deltaTime * speed);
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Enemy")) {
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Enemy")) {
             Debug.Log("A zombie got you!  RIP");
         }
     }
