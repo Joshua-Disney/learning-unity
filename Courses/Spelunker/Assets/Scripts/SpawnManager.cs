@@ -6,23 +6,17 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public GameObject treasurePrefab;
-    private int treasureCount;
     private float spawnRange = 20.0f;
-    private int numOfTreasures = 3;
+    private int numOfPrefabs = 3;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnTreasures(numOfTreasures);
-        Instantiate(enemyPrefab, GenerateSpawnPos(), enemyPrefab.transform.rotation);
+        SpawnPrefabs(numOfPrefabs);
     }
 
     // Update is called once per frame
     void Update()
     {
-        treasureCount = FindObjectsOfType<Treasure>().Length || numOfTreasures;
-        if (treasureCount == 0) {
-            Debug.Log("YOU FOUND ALL THE TREASURE!!!");
-        }
     }
 
     private Vector3 GenerateSpawnPos() {
@@ -35,8 +29,9 @@ public class SpawnManager : MonoBehaviour
         return spawnPos;
     }
 
-    void SpawnTreasures(int treasuresToSpawn) {
-        for (int i = 0; i < treasuresToSpawn; i++) {
+    void SpawnPrefabs(int prefabssToSpawn) {
+        for (int i = 0; i < prefabssToSpawn; i++) {
+            Instantiate(enemyPrefab, GenerateSpawnPos(), enemyPrefab.transform.rotation);
             Instantiate(treasurePrefab, GenerateSpawnPos(), treasurePrefab.transform.rotation);
         }
     }
