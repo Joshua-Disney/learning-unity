@@ -1,0 +1,135 @@
+Question 1
+You’re trying to write some code that creates a random age between 1 and 100 and prints that age, but there is an error. What would fix the error?
+
+A: Change line 1 to “private float age”
+B: Add the word “int” to line 8, so it says “int age = …”
+C: On line 7, change the word “private” to “void”
+D: Add a new line after line 8 that says “return age;”
+
+Answer: D
+
+
+
+Question 2
+The following message was displayed in the console: “Monica has 20 dollars”. 
+Which of the line options in the PrintNames function produced it?
+
+A: Debug.Log("Monica has " + money/2 " dollars”);
+B: Debug.Log(names[1] + " has " + money*2 " dollars”);
+C: Debug.Log(names[2] + " has " + money*2 " dollars”);
+D: Debug.Log(names[Monica] + " has " + money/2 " dollars”);
+
+Answer: C
+
+
+
+Question 3
+The code below produces “error CS0029: Cannot implicitly convert type 'float' to 'UnityEngine.Vector3'”. Which of the following would remove the error?
+
+A: On line 1, change “Vector3” to “float”
+B: On line 3, change “=” to “+”
+C: Either A or B
+D: None of the above 
+
+Answer: A
+
+
+
+Question 4
+Which of the following follows Unity’s naming conventions (especially as it relates to capitalization)?
+
+A: float forwardInput = Input.GetAxis("Vertical");
+B: float ForwardInput = input.GetAxis("Vertical");
+C: Float forwardInput = Input.getAxis("Vertical");
+D: float forwardInput = input.getAxis("Vertical");
+
+Answer: A
+
+
+
+Question 5
+You are trying to assign the powerup variable in the inspector, but it is not showing up in the Player Controller component. What is the problem?
+
+A: You cannot declare a powerup variable in the Player Controller Script
+B: You cannot assign GameObject type variables in the inspector
+C: The powerup variable should be public instead of private
+D: The PlayerController class should be private instead of public
+
+Answer: C
+
+
+
+Question 6
+Your game has just started and you see the error, “UnassignedReferenceException: The variable playerIndicator of PlayerController has not been assigned.” 
+What is likely the solution to the problem?
+
+A: PlayerController variable in the playerIndicator script needs to be declared
+B: The playerIndicator variable needs to be made private
+C: The PlayerController script must be assigned to the player object
+D: An object needs to be dragged onto the playerIndicator variable in the inspector
+
+Answer: D
+
+
+
+Question 7
+You are trying to create a new method that takes a number and multiplies it by two. Which method would do that?
+
+A: private float DoubleNumber() {
+    return *= 2;
+}
+B: private float DoubleNumber(float number) {
+    return *= 2;
+}
+C: private void DoubleNumber(float number) {
+    return *= 2;
+}
+D: private void DoubleNumber() {
+    return *= 2;
+}
+
+Answer: B
+
+
+
+Question 8
+Which comment best describes the code below?
+
+A: If the player collides with an enemy, destroy the enemy
+B: If the enemy collides with a spike, destroy the spike
+C: If the enemy collides with a spike, destroy the enemy
+D: If the player collides with a spike, destroy the spike
+
+Answer: B
+
+
+
+Question 9
+The code below produces the error, “error CS0029: Cannot implicitly convert type 'UnityEngine.GameObject' to 'UnityEngine.Rigidbody'”. What could be done to fix this issue?
+
+A: On line 1, change “collision” to “Rigidbody”
+B: On line 2, change “gameObject” to “Rigidbody”
+C: On line 3, delete “.gameObject”
+D: On line 3, add “.GetComponent<Rigidbody>()” before the semicolon
+
+Answer: D
+
+
+
+Question 10
+Which of the following statements about functions/methods are correct:
+
+A. Functions/methods must be passed at least one parameter
+B. Functions/methods with a "void" return type cannot be passed parameters
+C. A Function/method with an "int" return type could include the code, "return 0.5f;"
+D. If there was a Function/method declared as "private void RenameObject(string newName)", you could call that method with "RenameObject():"
+
+A: A and B are correct
+B: Only B is correct
+C: B and C are correct
+D: Only D is correct
+E: None are correct
+
+Answer: D
+
+Total score: 8/10
