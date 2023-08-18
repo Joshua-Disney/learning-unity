@@ -1,0 +1,86 @@
+Question 1
+You’re trying to write some code that creates a random age between 1 and 100 and prints that age, 
+but there is an error. What would fix the error?
+
+A: Change line 1 to “private float age”
+B: Add the word “int” to line 8, so it says “int age = …”
+C: On line 7, change the word “private” to “void”
+D: Add a new line after line 8 that says “return age;”
+
+Answer: D
+
+
+
+Question 2
+The following message was displayed in the console: “Monica has 20 dollars”. 
+Which of the line options in the PrintNames function produced it?
+
+A: Debug.Log("Monica has " + money/2 " dollars”);
+B: Debug.Log(names[1] + " has " + money*2 " dollars”);
+C: Debug.Log(names[2] + " has " + money*2 " dollars”);
+D: Debug.Log(names[Monica] + " has " + money/2 " dollars”);
+
+Answer: C
+
+
+
+Question 3
+The code below produces “error CS0029: Cannot implicitly convert type 'float' to 'UnityEngine.Vector3'”. Which of the following would remove the error?
+Select image to expand
+On line 1, change “Vector3” to “float”
+On line 3, change “=” to “+”
+Either A or B
+None of the above 
+
+Answer: 
+
+
+
+Question 4
+
+
+Answer: 
+
+
+
+Question 5
+
+
+Answer: 
+
+
+
+Question 6
+
+
+Answer: 
+
+
+
+Question 7
+
+
+Answer: 
+
+
+
+Question 8
+
+
+Answer: 
+
+
+
+Question 9
+
+
+Answer:  
+
+
+
+Question 10
+
+
+Answer: 
+
+Total score: /10
