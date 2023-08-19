@@ -19,7 +19,8 @@ B: Debug.Log(names[1] + " has " + money*2 " dollars”);
 C: Debug.Log(names[2] + " has " + money*2 " dollars”);
 D: Debug.Log(names[Monica] + " has " + money/2 " dollars”);
 
-Answer: C
+My Answer: C
+Correct Answer: B
 
 
 
@@ -130,6 +131,7 @@ C: B and C are correct
 D: Only D is correct
 E: None are correct
 
-Answer: D
+My Answer: D
+Correct Answer: E
 
 Total score: 8/10
