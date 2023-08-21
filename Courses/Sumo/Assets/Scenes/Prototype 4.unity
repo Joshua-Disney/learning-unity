@@ -234,7 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da214adc5ae89da479fe81ee413096ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4063069081119302132, guid: e07d785c1bdb88f4e9482f01751d8467, type: 3}
+  enemyPrefabs:
+  - {fileID: 4063069081119302132, guid: e07d785c1bdb88f4e9482f01751d8467, type: 3}
+  - {fileID: 2859306531233580938, guid: f1d1e1f5e2797eb47bc89e1abba7b754, type: 3}
   powerupPrefab: {fileID: 7509538842110141832, guid: 51ab19d1a588798418536c0209ac1e75, type: 3}
   enemyCount: 0
   waveNumber: 1
