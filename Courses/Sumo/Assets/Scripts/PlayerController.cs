@@ -49,4 +49,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
         }
     }
+
+    // Figure out how to launch projectiles and write that here
 }
