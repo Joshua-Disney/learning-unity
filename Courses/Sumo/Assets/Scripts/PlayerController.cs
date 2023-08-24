@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Powerup")) {
+        if (other.CompareTag("Repel")) {
             Destroy(other.gameObject);
             isPoweredUp = true;
             powerupIndicator.gameObject.SetActive(true);
