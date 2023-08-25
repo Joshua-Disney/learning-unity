@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Private Variables
     private Rigidbody playerRb;
     private GameObject focalPoint;
     private float powerUpForce = 15.0f;
+    private GameObject tmpRocket;
+    private Coroutine powerupCountdown;
+    // Public Variables
     public float speed = 2.0f;
     public bool isPoweredUp = false;
     public GameObject powerupIndicator;
+    public PowerUpType currentPowerUp = PowerUpType.None;
+    public GameObject rocketPrefab;
     // Start is called before the first frame update
     void Start()
     {
