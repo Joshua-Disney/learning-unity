@@ -31,7 +31,7 @@ public class FireBehavior : MonoBehaviour
             if (col.gameObject.CompareTag(target.tag)) {
                 Rigidbody targetRigidbody = col.gameObject.GetComponent<Rigidbody>();
                 Vector3 away = -col.contacts[0].normal;
-                targetRigidbody.AddForce(away * rocketStrength, ForceMode.Impulse);
+                targetRigidbody.AddForce(away * fireStrength, ForceMode.Impulse);
                 Destroy(gameObject);
             }
         }
