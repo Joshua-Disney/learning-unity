@@ -32,17 +32,22 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Repel")) {
-            Destroy(other.gameObject);
+        if (other.CompareTag("Powerup")) {
             isPoweredUp = true;
+            currentPowerUp = other.gameObject.GetComponent<PowerUp>().powerUpType;
             powerupIndicator.gameObject.SetActive(true);
-            StartCoroutine(PowerupCountdownRoutine());
+            Destroy(other.gameObject);
+            if(powerupCountdown != null) {
+                StopCoroutine(powerupCountdown);
+            }
+            powerupCountdown = StartCoroutine(PowerupCountdownRoutine())
         }
     }
 
     IEnumerator PowerupCountdownRoutine() {
         yield return new WaitForSeconds(7);
         isPoweredUp = false;
+        currentPowerUp = PowerUpType.None;
         powerupIndicator.gameObject.SetActive(false);
     }
 
