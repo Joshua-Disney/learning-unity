@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBehavior : MonoBehaviour
+public class MissileBehavior : MonoBehaviour
 {
     private Transform target;
     private float speed = 15.0f;
     private bool homing;
-    private float fireStrength = 15.0f;
+    private float missileStrength = 15.0f;
     private float aliveTimer = 5.0f;
 
     // Update is called once per frame
@@ -26,12 +26,12 @@ public class FireBehavior : MonoBehaviour
         Destroy(gameObject, aliveTimer);
     }
 
-    void OnCollisionEnter(Collision col) {
+    void OnCollisionEnter(Collision collision) {
         if (target != null) {
-            if (col.gameObject.CompareTag(target.tag)) {
-                Rigidbody targetRigidbody = col.gameObject.GetComponent<Rigidbody>();
-                Vector3 away = -col.contacts[0].normal;
-                targetRigidbody.AddForce(away * fireStrength, ForceMode.Impulse);
+            if (collision.gameObject.CompareTag(target.tag)) {
+                Rigidbody targetRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+                Vector3 away = -collision.contacts[0].normal;
+                targetRigidbody.AddForce(away * missileStrength, ForceMode.Impulse);
                 Destroy(gameObject);
             }
         }

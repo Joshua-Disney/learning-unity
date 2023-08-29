@@ -8,14 +8,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private GameObject focalPoint;
     private float powerUpForce = 15.0f;
-    private GameObject tmpRocket;
-    private Coroutine powerupCountdown;
     // Public Variables
     public float speed = 2.0f;
     public bool isPoweredUp = false;
     public GameObject powerupIndicator;
     public PowerUpType currentPowerUp = PowerUpType.None;
-    public GameObject rocketPrefab;
+    public GameObject missilePrefab;
+    private GameObject tmpMissile;
+    private Coroutine powerupCountdown;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+
+        if (currentPowerUp == PowerUpType.Missiles && Input.GetKeyDown(KeyCode.F)) {
+            LaunchMissiles();
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -40,7 +44,7 @@ public class PlayerController : MonoBehaviour
             if(powerupCountdown != null) {
                 StopCoroutine(powerupCountdown);
             }
-            powerupCountdown = StartCoroutine(PowerupCountdownRoutine())
+            powerupCountdown = StartCoroutine(PowerupCountdownRoutine());
         }
     }
 
@@ -52,14 +56,18 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Enemy") && isPoweredUp) {
+        if (collision.gameObject.CompareTag("Enemy") && currentPowerUp == PowerUpType.Repel) {
             Rigidbody enemyRb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
-
             enemyRb.AddForce(awayFromPlayer * powerUpForce, ForceMode.Impulse);
-            Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + isPoweredUp);
+            Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + currentPowerUp.ToString());
         }
     }
 
-    
+    void LaunchMissiles() {
+        foreach(var enemy in FindObjectsOfType<Enemy>()) {
+            tmpMissile = Instantiate(missilePrefab, transform.position, Vector3.up, Quaternion.identity);
+            tmpMissle.GetComponent<MissileBehavior>().Fire(enemy.transform);
+        }
+    }
 }

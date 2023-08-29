@@ -1,6 +1,6 @@
 using UnityEngine;
-public enum PowerUpType { None, Repel, Fire }
+public enum PowerUpType { None, Repel, Missiles }
 public class PowerUp : MonoBehaviour
 {
-public PowerUpType powerUpType;
+    public PowerUpType powerUpType;
 }
