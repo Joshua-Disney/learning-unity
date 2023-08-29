@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+
+        if (currentPowerUp == PowerUpType.Missiles && Input.GetKeyDown(KeyCode.F)) {
+            LaunchMissiles();
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -57,6 +61,13 @@ public class PlayerController : MonoBehaviour
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
             enemyRb.AddForce(awayFromPlayer * powerUpForce, ForceMode.Impulse);
             Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + currentPowerUp.ToString());
+        }
+    }
+
+    void LaunchMissiles() {
+        foreach(var enemy in FindObjectsOfType<Enemy>()) {
+            tmpMissile = Instantiate(missilePrefab, transform.position, Vector3.up, Quaternion.identity);
+            tmpMissle.GetComponent<MissiletBehavior>().Fire(enemy.transform);
         }
     }
 }
