@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
     void LaunchMissiles() {
         foreach(var enemy in FindObjectsOfType<Enemy>()) {
             tmpMissile = Instantiate(missilePrefab, transform.position, Vector3.up, Quaternion.identity);
-            tmpMissle.GetComponent<MissiletBehavior>().Fire(enemy.transform);
+            tmpMissle.GetComponent<MissileBehavior>().Fire(enemy.transform);
         }
     }
 }

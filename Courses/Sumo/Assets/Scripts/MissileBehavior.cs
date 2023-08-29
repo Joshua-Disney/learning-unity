@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissiletBehavior : MonoBehaviour
+public class MissileBehavior : MonoBehaviour
 {
     private Transform target;
     private float speed = 15.0f;

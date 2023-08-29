@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4540053638258078421}
   - component: {fileID: 4540053638259882029}
   m_Layer: 0
-  m_Name: Stomp
-  m_TagString: Stomp
+  m_Name: PowerupStomp
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
