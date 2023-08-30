@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MissileBehavior : MonoBehaviour
 {
+    // Variables
     private Transform target;
     private float speed = 15.0f;
     private bool homing;
@@ -13,27 +14,27 @@ public class MissileBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(homing && target != null) {
-            Vector3 moveDirection = (target.transform.position -
-            transform.position).normalized;
+        if (homing && target != null) {
+            Vector3 moveDirection = (target.transform.position - transform.position).normalized;
             transform.position += moveDirection * speed * Time.deltaTime;
             transform.LookAt(target);
         }
     }
-    public void Fire(Transform newTarget) {
+
+    public void Fire(Transform homingTarget)
+    {
         target = homingTarget;
         homing = true;
         Destroy(gameObject, aliveTimer);
     }
 
-    void OnCollisionEnter(Collision collision) {
-        if (target != null) {
-            if (collision.gameObject.CompareTag(target.tag)) {
-                Rigidbody targetRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-                Vector3 away = -collision.contacts[0].normal;
-                targetRigidbody.AddForce(away * missileStrength, ForceMode.Impulse);
-                Destroy(gameObject);
-            }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(target.tag)) {
+            Rigidbody targetRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 away = -collision.contacts[0].normal;
+            targetRigidbody.AddForce(away * missileStrength, ForceMode.Impulse);
+            Destroy(gameObject);
         }
     }
 }
