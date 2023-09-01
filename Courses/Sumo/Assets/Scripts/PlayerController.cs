@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
     public GameObject missilePrefab;
     private GameObject tmpMissile;
     private Coroutine powerUpCountdown;
+    public float hangTime;
+    public float slamSpeed;
+    public float explosionForce;
+    public float explosionRadius;
+    bool slamming = false;
+    float floorY;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,15 +49,35 @@ public class PlayerController : MonoBehaviour
             if (powerUpCountdown != null) {
                 StopCoroutine(powerUpCountdown);
             }
-            powerUpCountdown = StartCoroutine(powerUpCountdownRoutine());
+            powerUpCountdown = StartCoroutine(PowerUpCountdownRoutine());
         }
     }
 
-    IEnumerator powerUpCountdownRoutine() {
+    IEnumerator PowerUpCountdownRoutine() {
         yield return new WaitForSeconds(7);
         isPoweredUp = false;
         currentPowerUp = PowerUpType.None;
         powerupIndicator.gameObject.SetActive(false);
+    }
+
+    IEnumerator Slam() {
+        var enemies = FindObjectsOfType<Enemy>();
+        floorY = transform.position.y;
+        float jumpTime = Time.time + hangTime;
+        while (Time.time < jumpTime) {
+            playerRb.velocity = new Vector2(playerRb.velocity.x, slamSpeed);
+            yield return null;
+        }
+        while (transform.position.y < floorY) {
+            playerRb.velocity = new Vector2(playerRb.velocity.x, -slamSpeed * 2);
+            yield return null;
+        }
+        for (int i = 0; i < enemies.Length; i++) {
+            if (enemies[i] != null) {
+                enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, 0.0f, ForceMode.Impulse);
+            }
+        }
+        slamming = false;
     }
 
     private void OnCollisionEnter(Collision collision) {
