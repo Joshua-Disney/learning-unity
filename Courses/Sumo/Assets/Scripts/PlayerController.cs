@@ -34,8 +34,14 @@ public class PlayerController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+        
         if (currentPowerUp == PowerUpType.Missile && Input.GetKeyDown(KeyCode.F)) {
             LaunchMissiles();
+        }
+
+        if (currentPowerUp == PowerUpType.Slam && Input.GetKeyDown(KeyCode.Space) && slamming == false) {
+            slamming = true;
+            StartCoroutine(Slam());
         }
     }
 
