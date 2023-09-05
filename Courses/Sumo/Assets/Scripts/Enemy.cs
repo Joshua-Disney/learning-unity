@@ -28,6 +28,13 @@ public class Enemy : MonoBehaviour
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         enemyRb.AddForce( lookDirection * speed);
+
+        if (isBoss) {
+            if (Time.time > nextSpawn) {
+                spawnManager.SpawnMiniEnemy(miniEnemySpawnCount);
+            }
+        }
+
         if (transform.position.y < -10) {
             Destroy(gameObject);
         }
