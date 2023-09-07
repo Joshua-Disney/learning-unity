@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject bossPrefab;
     public GameObject[] miniEnemyPrefabs;
     public int bossRound;
+    public bool gameOver = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,16 +24,18 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyCount = FindObjectsOfType<Enemy>().Length;
-        if (enemyCount == 0) {
-            waveNumber++;
-            if ( waveNumber % bossRound == 0 ) {
-                SpawnBossWave(waveNumber);
-            } else {
-                SpawnEnemyWave(waveNumber);
-            }
-            int randomPowerup = Random.Range(0, powerupPrefabs.Length);
-            Instantiate(powerupPrefabs[randomPowerup], GenerateSpawnPos(), powerupPrefabs[randomPowerup].transform.rotation);
+        if (gameOver == false)
+        {   enemyCount = FindObjectsOfType<Enemy>().Length;
+            if (enemyCount == 0) {
+                waveNumber++;
+                if ( waveNumber % bossRound == 0 ) {
+                    SpawnBossWave(waveNumber);
+                } else {
+                    SpawnEnemyWave(waveNumber);
+                }
+                int randomPowerup = Random.Range(0, powerupPrefabs.Length);
+                Instantiate(powerupPrefabs[randomPowerup], GenerateSpawnPos(), powerupPrefabs[randomPowerup].transform.rotation);
+            }   
         }
     }
 
