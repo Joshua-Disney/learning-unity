@@ -8,7 +8,7 @@ public class MissileBehavior : MonoBehaviour
     private Transform target;
     private float speed = 15.0f;
     private bool homing;
-    private float missileStrength = 15.0f;
+    private float missileStrength = 150.0f;
     private float aliveTimer = 5.0f;
 
     // Update is called once per frame

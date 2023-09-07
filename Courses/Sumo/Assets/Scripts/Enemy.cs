@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.Find("Player");
 
         if (isBoss) {
-            spawnManager = FindObjectsOfType<SpawnManager>();
+            spawnManager = FindObjectOfType<SpawnManager>();
         }
     }
 
