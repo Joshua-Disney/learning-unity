@@ -12,10 +12,11 @@ public class SpawnManager : MonoBehaviour
     public GameObject bossPrefab;
     public GameObject[] miniEnemyPrefabs;
     public int bossRound;
-    public bool gameOver = false;
+    private PlayerController playerControllerScript;
     // Start is called before the first frame update
     void Start()
     {
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         int randomPowerup = Random.Range(0, powerupPrefabs.Length);
         Instantiate(powerupPrefabs[randomPowerup], GenerateSpawnPos(), powerupPrefabs[randomPowerup].transform.rotation);
         SpawnEnemyWave(waveNumber);
@@ -24,8 +25,8 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameOver == false)
-        {   enemyCount = FindObjectsOfType<Enemy>().Length;
+        if (playerControllerScript.gameOver == false) {
+            enemyCount = FindObjectsOfType<Enemy>().Length;
             if (enemyCount == 0) {
                 waveNumber++;
                 if ( waveNumber % bossRound == 0 ) {
@@ -34,8 +35,8 @@ public class SpawnManager : MonoBehaviour
                     SpawnEnemyWave(waveNumber);
                 }
                 int randomPowerup = Random.Range(0, powerupPrefabs.Length);
-                Instantiate(powerupPrefabs[randomPowerup], GenerateSpawnPos(), powerupPrefabs[randomPowerup].transform.rotation);
-            }   
+                Instantiate(powerupPrefabs[randomPowerup], GenerateSpawnPos(), powerupPrefabs[randomPowerup].transform.rotation); 
+            }
         }
     }
 

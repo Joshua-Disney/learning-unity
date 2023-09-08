@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float explosionRadius;
     bool slamming = false;
     float floorY;
+    public bool gameOver = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,18 +32,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float forwardInput = Input.GetAxis("Vertical");
-        playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
-        powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+        if (transform.position.y < -10) {
+            Debug.Log("Game Over!");
+            gameOver = true;
+        }
         
-        if (currentPowerUp == PowerUpType.Missile && Input.GetKeyDown(KeyCode.F)) {
-            LaunchMissiles();
-        }
+        if (!gameOver) {
+            float forwardInput = Input.GetAxis("Vertical");
+            playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
+            powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+            
+            if (currentPowerUp == PowerUpType.Missile && Input.GetKeyDown(KeyCode.F)) {
+                LaunchMissiles();
+            }
 
-        if (currentPowerUp == PowerUpType.Slam && Input.GetKeyDown(KeyCode.Space) && slamming == false) {
-            slamming = true;
-            StartCoroutine(Slam());
+            if (currentPowerUp == PowerUpType.Slam && Input.GetKeyDown(KeyCode.Space) && slamming == false) {
+                slamming = true;
+                StartCoroutine(Slam());
+            }
         }
+        
+        
     }
 
     private void OnTriggerEnter(Collider other) {
