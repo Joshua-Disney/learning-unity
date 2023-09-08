@@ -35,8 +35,9 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -10) {
             Debug.Log("Game Over!");
             gameOver = true;
+            Destroy(gameObject);
         }
-        
+
         if (!gameOver) {
             float forwardInput = Input.GetAxis("Vertical");
             playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
