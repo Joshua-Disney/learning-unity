@@ -142,3 +142,10 @@ Feature on backlog - Add in lighting effects
 07/27/2023
 
 *Completed Bonus content for Jump Force Project.
+
+
+
+09/08/2023
+
+* Completed bonus content for Sumo Project
+* Watch intro video for UI lesson block
