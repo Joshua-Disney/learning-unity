@@ -16,4 +16,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    // No enery.  Bad mental health day
 }
