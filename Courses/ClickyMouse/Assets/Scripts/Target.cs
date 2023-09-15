@@ -48,4 +48,6 @@ public class Target : MonoBehaviour
     {
         return new Vector3(Random.Range(-xRange, xRange), ySpawnPos);
     }
+
+    // Completed lesson 5.1
 }
