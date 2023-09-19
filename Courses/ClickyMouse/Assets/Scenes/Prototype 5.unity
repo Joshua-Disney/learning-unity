@@ -734,6 +734,7 @@ MonoBehaviour:
   - {fileID: 5165765190096087027, guid: e25f83b43f737fa46b66093e00fb71a7, type: 3}
   - {fileID: 577105031275454665, guid: d87a1ca5bb3895142bf2c52813060293, type: 3}
   - {fileID: 3128171857281821985, guid: f76b72418640a5c4bb3e288e3da8dc2a, type: 3}
+  scoreText: {fileID: 1999324677}
 --- !u!4 &1736658986
 Transform:
   m_ObjectHideFlags: 0
@@ -861,7 +862,7 @@ GameObject:
   - component: {fileID: 1999324678}
   - component: {fileID: 1999324677}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
