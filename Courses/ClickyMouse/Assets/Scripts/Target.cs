@@ -7,7 +7,7 @@ public class Target : MonoBehaviour
     public int pointValue;
     public ParticleSystem explosionParticle;
     private Rigidbody targetRb;
-    private float minSpeed = 12;
+    private float minSpeed = 13;
     private float maxSpeed = 16;
     private float maxTorque = 10;
     private float xRange = 4;
