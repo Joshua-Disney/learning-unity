@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private float spawnRate = 1.0f;
+    private float spawnRate = 2.0f;
     private int score;
     public List<GameObject> targets;
     public TextMeshProUGUI scoreText;
@@ -53,12 +53,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame()
+    public void StartGame(int difficulty)
     {
         isGameActive = true;
         StartCoroutine(spawnTarget());
         score = 0;
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
+        spawnRate /= difficulty;
     }
 }
