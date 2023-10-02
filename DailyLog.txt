@@ -149,3 +149,7 @@ Feature on backlog - Add in lighting effects
 
 * Completed bonus content for Sumo Project
 * Watch intro video for UI lesson block
+
+10/01/2023
+
+* Create Whack A Food project
