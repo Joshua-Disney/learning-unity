@@ -88,3 +88,5 @@ public class GameManagerX : MonoBehaviour
     }
 
 }
+
+// Trying to find why objects destroy on hover
