@@ -15,6 +15,8 @@ public class GameManagerX : MonoBehaviour
     public List<GameObject> targetPrefabs;
 
     private int score;
+    private float timeLeft = 60.0f;
+    private float countDown = 1.0f;
     private float spawnRate = 2.0f;
     public bool isGameActive;
 
@@ -44,6 +46,21 @@ public class GameManagerX : MonoBehaviour
             if (isGameActive)
             {
                 Instantiate(targetPrefabs[index], RandomSpawnPosition(), targetPrefabs[index].transform.rotation);
+            }
+            
+        }
+    }
+
+    IEnumerator TimerCountdown()
+    {
+        while(isGameActive)
+        {
+            yield return new WaitForSeconds(countDown);
+            timeLeft -= countDown;
+
+            if (timeLeft <= 0)
+            {
+                GameOver();
             }
             
         }
