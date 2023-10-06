@@ -55,7 +55,13 @@ public class GameManagerX : MonoBehaviour
     {
         while(isGameActive)
         {
-            yield return new WaitForSeconds(timeLeft);
+            yield return new WaitForSeconds(countDown);
+            timeLeft -= countDown;
+
+            if (timeLeft <= 0)
+            {
+                GameOver();
+            }
             
         }
     }
