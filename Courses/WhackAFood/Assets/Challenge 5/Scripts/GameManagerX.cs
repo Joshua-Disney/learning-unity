@@ -51,6 +51,7 @@ public class GameManagerX : MonoBehaviour
         }
     }
 
+    // This ALMOST WORKS
     IEnumerator TimerCountdown()
     {
         while(isGameActive)
