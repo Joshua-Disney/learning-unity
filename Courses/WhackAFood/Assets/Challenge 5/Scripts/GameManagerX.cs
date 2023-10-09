@@ -95,8 +95,11 @@ public class GameManagerX : MonoBehaviour
 
     public void UpdateTimeLeft(int timeToRemove)
     {
-        timeLeft -= timeToRemove;
-        timeLeftText.text = "Time Left: " + timeLeft;
+        if (timeLeft > 0)
+        {
+            timeLeft -= timeToRemove;
+            timeLeftText.text = "Time Left: " + timeLeft;
+        }
     }
 
     // Stop game, bring up game over text and restart button
